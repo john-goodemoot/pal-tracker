@@ -4,4 +4,4 @@ applications:
   routes:
   - route: jg-pal-tracker-app-review.apps.pcf.paltraining.perficient.com
   env:
-    WELCOME_MESSAGE: hello
+    WELCOME_MESSAGE: Hello from the review environment
