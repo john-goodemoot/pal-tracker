@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     //compile("org.springframework.boot:spring-boot-starter-web")
-    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '2.0.4.RELEASE'
-    compile group: 'org.springframework', name: 'spring-web', version: '5.0.8.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot', version: '2.0.4.RELEASE'
+    compile('org.springframework.boot:spring-boot-autoconfigure:2.0.4.RELEASE')
+    compile('org.springframework:spring-web:5.0.8.RELEASE')
+    compile('org.springframework.boot:spring-boot:2.0.4.RELEASE')
 }
