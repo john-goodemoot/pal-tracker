@@ -1,7 +1,0 @@
-build
-out
-gradle
-.gradle
-.idea
-*.iml
-ci/variables.yml
