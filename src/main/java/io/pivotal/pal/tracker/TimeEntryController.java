@@ -7,12 +7,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 @RestController
 @RequestMapping("/time-entries")
 public class TimeEntryController {
 
     private TimeEntryRepository timeEntryRepository;
-
 
     public TimeEntryController(TimeEntryRepository repository) {
         this.timeEntryRepository = repository;
@@ -20,10 +20,8 @@ public class TimeEntryController {
 
     @PostMapping
     public ResponseEntity create(@RequestBody TimeEntry timeEntry) {
-    TimeEntry time=timeEntryRepository.create(timeEntry);
-    return new ResponseEntity<>(time, HttpStatus.CREATED);
-
-
+        TimeEntry time=timeEntryRepository.create(timeEntry);
+        return new ResponseEntity<>(time, HttpStatus.CREATED);
     }
 
     @PutMapping("{id}")
@@ -36,11 +34,8 @@ public class TimeEntryController {
     }
     @GetMapping
     public ResponseEntity<List<TimeEntry>> list(){
-
        return new ResponseEntity<List<TimeEntry>> (timeEntryRepository.list(), HttpStatus.OK);
     }
-
-
 
     @GetMapping("{id}")
     public ResponseEntity<TimeEntry> read(@PathVariable Long id) {
@@ -49,8 +44,8 @@ public class TimeEntryController {
             return new ResponseEntity<TimeEntry>(generatedTimeEntry,HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<TimeEntry>(generatedTimeEntry,HttpStatus.OK);
-
     }
+
     @DeleteMapping("{id}")
     public ResponseEntity<TimeEntry> delete(@PathVariable Long id) {
         timeEntryRepository.delete(id);

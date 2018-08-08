@@ -9,7 +9,6 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     @Override
     public TimeEntry create(TimeEntry timeEntry) {
-
         long id=timeEntryMap.size()+1;
         timeEntry.setId(id);
         timeEntryMap.put(id,timeEntry);
@@ -18,29 +17,23 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     @Override
     public TimeEntry update(Long id, TimeEntry timeEntry) {
-    //   TimeEntry time =find(id);
-                       timeEntry.setId(id);
-       timeEntryMap.put(id,timeEntry);
-        return find(id);
+        timeEntry.setId(id);
+        timeEntryMap.put(id,timeEntry);
+        return this.find(id);
     }
 
     @Override
     public List<TimeEntry> list(){
-
-        List<TimeEntry> list = new ArrayList<TimeEntry>(timeEntryMap.values());
-    return list;
+        return new ArrayList<TimeEntry>(timeEntryMap.values());
     }
 
     @Override
     public TimeEntry find(Long id) {
-
-      TimeEntry timeEntry=  timeEntryMap.get(id);
-        return timeEntry ;
+        return timeEntryMap.get(id);
     }
 
     @Override
     public void delete(Long id) {
-
-            timeEntryMap.remove(id);
+        timeEntryMap.remove(id);
     }
 }
