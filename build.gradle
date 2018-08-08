@@ -24,6 +24,7 @@ dependencies {
     //compile('org.springframework:spring-web:5.0.8.RELEASE')
     //compile('org.springframework.boot:spring-boot:2.0.4.RELEASE')
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.1")
 }
 
 bootRun.environment([
