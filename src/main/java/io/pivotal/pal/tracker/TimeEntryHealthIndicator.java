@@ -15,6 +15,7 @@ public class TimeEntryHealthIndicator implements HealthIndicator {
         this.repository = timeEntryRepository;
     }
 
+    @Override
     public Health health() {
         Health.Builder builder = new Health.Builder();
 
