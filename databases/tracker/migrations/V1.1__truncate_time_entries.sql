@@ -1,0 +1,1 @@
+TRUNCATE time_entries;
