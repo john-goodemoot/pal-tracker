@@ -1,8 +1,8 @@
-package test.pivotal.pal.tracker;
+package test.pivotal.pal.tracker.controllers;
 
-import io.pivotal.pal.tracker.TimeEntry;
-import io.pivotal.pal.tracker.TimeEntryController;
-import io.pivotal.pal.tracker.TimeEntryRepository;
+import io.pivotal.pal.tracker.model.TimeEntry;
+import io.pivotal.pal.tracker.controllers.TimeEntryController;
+import io.pivotal.pal.tracker.repositories.TimeEntryRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.boot.actuate.metrics.CounterService;

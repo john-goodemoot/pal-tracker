@@ -1,7 +1,7 @@
-package test.pivotal.pal.tracker;
+package test.pivotal.pal.tracker.repositories;
 
-import io.pivotal.pal.tracker.InMemoryTimeEntryRepository;
-import io.pivotal.pal.tracker.TimeEntry;
+import io.pivotal.pal.tracker.repositories.InMemoryTimeEntryRepository;
+import io.pivotal.pal.tracker.model.TimeEntry;
 
 import org.junit.Test;
 

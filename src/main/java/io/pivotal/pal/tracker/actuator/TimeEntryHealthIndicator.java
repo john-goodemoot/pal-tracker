@@ -1,6 +1,6 @@
-package io.pivotal.pal.tracker;
+package io.pivotal.pal.tracker.actuator;
 
-import io.pivotal.pal.tracker.TimeEntryRepository;
+import io.pivotal.pal.tracker.repositories.TimeEntryRepository;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;
